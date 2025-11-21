@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Privacy Protocol // Boom Epic Dominance</title>
+    
+    <!-- SEO META TAGS -->
+    <meta name="description" content="BoomEpic Media's privacy protocol. Enterprise-grade data protection, zero-sale policy, and full transparency for our B2B partners.">
+    <meta name="keywords" content="BoomEpic, Privacy Policy, Data Protection, B2B Media, Gaming Marketing, Compliance">
+    <meta name="author" content="BoomEpic Media">
+    <link rel="canonical" href="https://boomepic.com/privacy-policy">
+
+    <!-- OPEN GRAPH / FACEBOOK -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boomepic.com/privacy-policy">
+    <meta property="og:title" content="Privacy Protocol // Boom Epic Dominance">
+    <meta property="og:description" content="Enterprise-grade data protection for B2B partners. No data sales. Full transparency.">
+    <meta property="og:image" content="https://boomepic.com/assets/og-privacy.jpg">
+
+    <!-- TWITTER -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://boomepic.com/privacy-policy">
+    <meta property="twitter:title" content="Privacy Protocol // Boom Epic Dominance">
+    <meta property="twitter:description" content="Enterprise-grade data protection for B2B partners. No data sales. Full transparency.">
+    <meta property="twitter:image" content="https://boomepic.com/assets/og-privacy.jpg">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Footer Font (Clash Display) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Protocol",
+      "description": "Privacy Policy for BoomEpic Media",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BoomEpic Media",
+        "url": "https://boomepic.com",
+        "logo": "https://boomepic.com/assets/logo.png"
+      }
+    }
+    </script>
+
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --bg-color: #050505;
+            --bg-card: #0B0B0B;
+            --text-main: #ffffff;
+            --text-muted: #A3A3A3;
+            
+            /* Accents */
+            --accent-main: #06B6D4;
+            
+            --border-dim: rgba(255, 255, 255, 0.08);
+            --border-light: rgba(255, 255, 255, 0.15);
+            
+            --font-head: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-tech: 'JetBrains Mono', monospace;
+            --font-footer: 'Clash Display', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- CINEMATIC NOISE --- */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNyIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjA1Ii8+PC9zdmc+');
+            z-index: 9999; pointer-events: none; opacity: 0.6;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
+
+        /* --- NAVIGATION BAR --- */
+        .top-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 80px;
+            background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(20px) saturate(150%);
+            border-bottom: 1px solid var(--border-dim);
+            z-index: 1000; display: flex; align-items: center;
+        }
+        .nav-content {
+            width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 5%;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo {
+            font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; 
+            color: #fff; text-decoration: none; letter-spacing: -0.03em; text-transform: uppercase;
+            position: relative; z-index: 1002;
+        }
+        .nav-logo span { color: var(--accent-main); }
+
+        .nav-links { display: flex; gap: 40px; align-items: center; }
+        .nav-link {
+            color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 0.9rem; font-weight: 500;
+            opacity: 0.7; transition: opacity 0.2s;
+        }
+        .nav-link:hover { opacity: 1; }
+
+        /* UPDATED CONTACT BUTTON: SQUARE */
+        .nav-contact-btn {
+            padding: 10px 24px;
+            background: rgba(6, 182, 212, 0.1); 
+            border: 1px solid var(--accent-main);
+            color: var(--accent-main);
+            font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+            text-decoration: none; transition: all 0.3s;
+            border-radius: 2px;
+        }
+        .nav-contact-btn:hover { background: var(--accent-main); color: #000; box-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+
+        /* Hamburger */
+        .mobile-menu-btn {
+            display: none; width: 44px; height: 44px;
+            background: rgba(255,255,255,0.05); border: 1px solid var(--border-light);
+            border-radius: 8px; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+            cursor: pointer; position: relative; z-index: 1002;
+        }
+        .mobile-menu-btn span { width: 20px; height: 2px; background: #fff; display: block; transition: all 0.3s ease; }
+
+        .mobile-nav-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: #050505; z-index: 1001;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem;
+            transform: translateY(-100%); opacity: 0; pointer-events: none;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-nav-overlay.active { transform: translateY(0); opacity: 1; pointer-events: all; }
+        .mobile-nav-link {
+            font-family: var(--font-head); font-size: 2rem; color: #fff; 
+            text-decoration: none; font-weight: 700; text-transform: uppercase;
+            opacity: 0; transform: translateY(20px); transition: all 0.3s;
+        }
+        .mobile-nav-overlay.active .mobile-nav-link { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 900px) { 
+            .nav-links { display: none; } 
+            .mobile-menu-btn { display: flex; } 
+        }
+
+
+        /* --- HEADER --- */
+        .policy-header {
+            padding: 180px 0 80px 0; text-align: center;
+            background: radial-gradient(ellipse at top, rgba(255,255,255,0.05) 0%, #050505 70%);
+        }
+        @media (max-width: 768px) { .policy-header { padding: 140px 0 60px 0; } }
+
+        .label-tech {
+            font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.25em; font-weight: 700;
+            text-transform: uppercase; color: var(--text-muted); display: inline-flex; align-items: center; gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+        .label-tech::before { content:''; width:8px; height:8px; background:var(--accent-main); box-shadow: 0 0 8px var(--accent-main); border-radius: 50%; }
+        
+        .policy-header h1 { font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1; }
+        .policy-meta { font-family: var(--font-tech); color: #666; font-size: 0.9rem; }
+
+
+        /* --- MAIN LAYOUT --- */
+        .policy-container {
+            display: grid; grid-template-columns: 300px 1fr; gap: 80px;
+            padding-bottom: 10rem; position: relative;
+        }
+        @media (max-width: 1000px) { 
+            .policy-container { grid-template-columns: 1fr; gap: 4rem; padding-bottom: 5rem; } 
+        }
+
+
+        /* --- SIDEBAR TOC --- */
+        .policy-sidebar { position: relative; }
+        .toc-wrapper { position: sticky; top: 120px; }
+        .toc-title { font-family: var(--font-head); font-size: 0.9rem; color: #fff; margin-bottom: 1.5rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+        .toc-list { list-style: none; border-left: 1px solid var(--border-dim); }
+        .toc-link {
+            display: block; padding: 10px 0 10px 20px; color: #666; text-decoration: none;
+            font-family: var(--font-body); font-size: 0.95rem; transition: all 0.3s; border-left: 2px solid transparent; margin-left: -1px;
+        }
+        .toc-link:hover { color: #fff; }
+        .toc-link.active { color: var(--accent-main); border-left-color: var(--accent-main); }
+        
+        /* Mobile TOC: Hide on small screens */
+        @media (max-width: 1000px) { .policy-sidebar { display: none; } }
+
+
+        /* --- CONTENT --- */
+        .policy-content { max-width: 800px; width: 100%; }
+
+        /* Summary Card */
+        .summary-card {
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border-light);
+            padding: 2.5rem; margin-bottom: 4rem; border-radius: 4px;
+        }
+        @media (max-width: 768px) { .summary-card { padding: 1.5rem; margin-bottom: 3rem; } }
+
+        .summary-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+        .summary-card p { color: #ccc; margin-bottom: 0; font-size: 1rem; line-height: 1.7; }
+
+        /* Sections */
+        .legal-section { margin-bottom: 4rem; scroll-margin-top: 120px; border-bottom: 1px solid var(--border-dim); padding-bottom: 4rem; }
+        .legal-section:last-child { border-bottom: none; }
+        
+        .legal-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.5rem; color: #fff; display: flex; align-items: center; gap: 15px; }
+        .sec-num { font-family: var(--font-tech); color: var(--accent-main); font-size: 1rem; opacity: 0.7; flex-shrink: 0; }
+        
+        .legal-section h3 { font-size: 1.2rem; margin: 2rem 0 1rem 0; color: #fff; font-family: var(--font-head); font-weight: 600; }
+        
+        .legal-section p { color: #aaa; margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8; }
+        .legal-section ul { list-style: none; margin-bottom: 1.5rem; padding-left: 1rem; }
+        .legal-section li { position: relative; padding-left: 20px; margin-bottom: 10px; color: #aaa; line-height: 1.6; }
+        .legal-section li::before { content:''; position: absolute; left: 0; top: 10px; width: 4px; height: 4px; background: var(--accent-main); border-radius: 50%; }
+        
+        .legal-section a { color: var(--accent-main); text-decoration: none; border-bottom: 1px solid rgba(6, 182, 212, 0.3); transition: border 0.3s; }
+        .legal-section a:hover { border-bottom-color: var(--accent-main); }
+
+
+        /* --- FOOTER --- */
+        .epic-footer {
+            width: 100%; background: #050505; padding-top: 5rem; position: relative; z-index: 10;
+            font-family: var(--font-footer); border-top: 1px solid var(--border-dim); margin-top: auto;
+        }
+        .footer-inner { width: 95%; max-width: 1400px; margin: 0 auto; padding-bottom: 2rem; }
+        .footer-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 30px; }
+        .footer-cta h3 { font-family: var(--font-footer); font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1.1; font-weight: 500; margin-bottom: 1rem; text-transform: none; }
+        .footer-cta span { color: #666; }
+        .footer-email { font-size: clamp(1.2rem, 3vw, 1.8rem); text-decoration: underline; text-underline-offset: 8px; color: #fff; transition: color 0.3s; word-break: break-all; }
+        .footer-email:hover { color: #ccc; }
+        
+        .sys-status { display: inline-flex; items-center; gap: 12px; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; }
+        .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+        .status-text { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); } 70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+        
+        .footer-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.15); margin-bottom: 3rem; }
+        .footer-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 4rem; }
+        @media (max-width: 768px) { .footer-links { grid-template-columns: 1fr 1fr; } }
+        
+        .link-col { display: flex; flex-direction: column; gap: 16px; }
+        .link-head { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #666; margin-bottom: 8px; font-family: var(--font-tech); }
+        .link-col a { color: #9ca3af; text-decoration: none; transition: all 0.3s ease; position: relative; font-size: 1rem; }
+        .link-col a:hover { color: #fff; transform: translateX(5px); }
+        .link-col a::before { content: ''; position: absolute; left: -12px; top: 50%; transform: translateY(-50%) scale(0); width: 4px; height: 4px; background-color: #fff; border-radius: 50%; transition: transform 0.3s ease; }
+        .link-col a:hover::before { transform: translateY(-50%) scale(1); }
+        
+        .copyright { font-size: 0.75rem; color: #555; margin-top: auto; font-family: var(--font-tech); }
+        
+        .footer-brand { width: 100%; overflow: hidden; display: flex; justify-content: center; line-height: 0.75; padding-bottom: 0; }
+        .epic-text { font-size: 42vw; font-weight: 700; letter-spacing: -0.04em; background: linear-gradient(180deg, #ffffff 30%, #333 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none; user-select: none; margin-bottom: -5vw; }
+        .epic-dot { color: var(--accent-main); -webkit-text-fill-color: var(--accent-main); }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="top-nav">
+        <div class="nav-content">
+            <a href="https://boomepic.com" class="nav-logo">BOOM<span>EPIC</span></a>
+            
+            <!-- Desktop Links -->
+            <div class="nav-links">
+                <a href="https://boomepic.com" class="nav-link">Home</a>
+                <a href="https://boomepic.com/network" class="nav-link">Network</a>
+                <a href="https://boomepic.com/packages" class="nav-link">Packages</a>
+                <a href="https://boomepic.com/case-studies" class="nav-link">Case Studies</a>
+                <a href="https://boomepic.com/about" class="nav-link">About</a>
+                <!-- Updated Contact Button: Square -->
+                <a href="https://boomepic.com/contact" class="nav-contact-btn">Contact</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobileOverlay">
+        <a href="https://boomepic.com" class="mobile-nav-link">Home</a>
+        <a href="https://boomepic.com/network" class="mobile-nav-link">Network</a>
+        <a href="https://boomepic.com/packages" class="mobile-nav-link">Packages</a>
+        <a href="https://boomepic.com/case-studies" class="mobile-nav-link">Case Studies</a>
+        <a href="https://boomepic.com/about" class="mobile-nav-link">About</a>
+        <a href="https://boomepic.com/contact" class="btn-primary" style="margin-top: 2rem;">Contact</a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="policy-header">
+        <div class="container">
+            <div class="label-tech">LEGAL INFRASTRUCTURE</div>
+            <h1>Privacy Policy</h1>
+            <div class="policy-meta">Last Updated: November 20, 2025 // Version 2.2</div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="container policy-container">
+        
+        <!-- Sidebar ToC -->
+        <aside class="policy-sidebar">
+            <div class="toc-wrapper">
+                <div class="toc-title">Table of Contents</div>
+                <ul class="toc-list">
+                    <li><a href="#executive-summary" class="toc-link active">Executive Summary</a></li>
+                    <li><a href="#info-collected" class="toc-link">1. Information Collected</a></li>
+                    <li><a href="#data-usage" class="toc-link">2. Data Usage</a></li>
+                    <li><a href="#cookies" class="toc-link">3. Cookies & Tracking</a></li>
+                    <li><a href="#retention" class="toc-link">4. Data Retention</a></li>
+                    <li><a href="#security" class="toc-link">5. Security Protocols</a></li>
+                    <li><a href="#international" class="toc-link">6. International Transfer</a></li>
+                    <li><a href="#rights" class="toc-link">7. User Rights</a></li>
+                    <li><a href="#contact" class="toc-link">8. Contact Authority</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Content Body -->
+        <div class="policy-content">
+            
+            <!-- Executive Summary Card (B2B FOCUSED) -->
+            <div id="executive-summary" class="summary-card legal-section">
+                <h3>Executive Summary</h3>
+                <p>BoomEpic Media is committed to maintaining the confidentiality, integrity, and security of personal information entrusted to us by our business partners and website visitors. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of your information when you engage with our services for B2B marketing, sponsorship inquiries, and partnership activations.</p>
+                <p><strong>Key Principle:</strong> We operate with a B2B-first mindset. Data collection is strictly limited to what is necessary to facilitate professional relationships and execute campaign agreements. We do not monetize personal data.</p>
+            </div>
+
+            <!-- 1. Information Collected -->
+            <div id="info-collected" class="legal-section">
+                <h2><span class="sec-num">01 //</span> Information Collected</h2>
+                <p>We collect information to provide better services to our partners. The categories of data collected include:</p>
+                
+                <h3>1.1 Information You Provide Voluntarily</h3>
+                <ul>
+                    <li><strong>Business Contact Information:</strong> Name, job title, company name, email address, and phone number provided via our contact forms or direct outreach.</li>
+                    <li><strong>Campaign Details:</strong> Information regarding budget, campaign objectives, and strategic requirements submitted during the inquiry process.</li>
+                    <li><strong>Financial Information:</strong> Payment details (processed via secure third-party gateways) required for invoicing and contract fulfillment.</li>
+                </ul>
+
+                <h3>1.2 Automatically Collected Information</h3>
+                <ul>
+                    <li><strong>Log Data:</strong> IP address, browser type, operating system, referral URLs, and device information.</li>
+                    <li><strong>Usage Data:</strong> Pages visited, time spent on pages, and click-stream data to analyze site performance.</li>
+                </ul>
+            </div>
+
+            <!-- 2. Data Usage -->
+            <div id="data-usage" class="legal-section">
+                <h2><span class="sec-num">02 //</span> Data Usage Protocol</h2>
+                <p>We utilize collected data strictly for professional and operational purposes:</p>
+                <ul>
+                    <li><strong>Service Delivery:</strong> To execute agreed-upon media campaigns, sponsorship integrations, and partnership activations.</li>
+                    <li><strong>Communication:</strong> To respond to inquiries, send proposals, invoices, and operational updates regarding your account.</li>
+                    <li><strong>Compliance:</strong> To fulfill legal obligations, tax requirements, and enforce our Terms of Service.</li>
+                    <li><strong>Optimization:</strong> To analyze aggregated, non-identifiable traffic patterns to improve website functionality and user experience.</li>
+                </ul>
+                <p>We adhere to a strict <strong>No-Sale Policy</strong>. Your personal and business information is never sold to third-party data brokers or marketing agencies.</p>
+            </div>
+
+            <!-- 3. Cookies -->
+            <div id="cookies" class="legal-section">
+                <h2><span class="sec-num">03 //</span> Cookies & Tracking Technologies</h2>
+                <p>We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.</p>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Necessary for the website to function properly (e.g., security tokens).</li>
+                    <li><strong>Analytical Cookies:</strong> Help us understand how visitors interact with the website (e.g., Google Analytics). These are aggregated and anonymized.</li>
+                </ul>
+                <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+            </div>
+
+            <!-- 4. Data Retention -->
+            <div id="retention" class="legal-section">
+                <h2><span class="sec-num">04 //</span> Data Retention Policy</h2>
+                <p>We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy.</p>
+                <ul>
+                    <li><strong>Operational Data:</strong> Retained for the duration of our active business relationship.</li>
+                    <li><strong>Legal & Financial Records:</strong> Retained for a minimum of 7 years to comply with tax laws and legal obligations.</li>
+                    <li><strong>Inquiry Data:</strong> Retained for 24 months from the last point of contact, after which it is anonymized or deleted.</li>
+                </ul>
+            </div>
+
+            <!-- 5. Security -->
+            <div id="security" class="legal-section">
+                <h2><span class="sec-num">05 //</span> Security Protocols</h2>
+                <p>We implement enterprise-grade security measures to protect your data from unauthorized access, alteration, disclosure, or destruction.</p>
+                <ul>
+                    <li><strong>Encryption:</strong> All data transmitted between your browser and our servers is encrypted using TLS (Transport Layer Security) protocols.</li>
+                    <li><strong>Access Control:</strong> Access to personal data is restricted to authorized personnel who have a legitimate business need to know.</li>
+                    <li><strong>Vendor Assessment:</strong> We rigorously vet third-party service providers to ensure they meet our security standards.</li>
+                </ul>
+            </div>
+
+            <!-- 6. International Transfer -->
+            <div id="international" class="legal-section">
+                <h2><span class="sec-num">06 //</span> International Data Transfer</h2>
+                <p>Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.</p>
+                <p>If you are located outside United States and choose to provide information to us, please note that we transfer the data, including Personal Data, to United States and process it there. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
+            </div>
+
+            <!-- 7. User Rights -->
+            <div id="rights" class="legal-section">
+                <h2><span class="sec-num">07 //</span> User Rights & Control</h2>
+                <p>Depending on your location (e.g., GDPR for EU residents, CCPA for California residents), you may have specific rights regarding your personal data:</p>
+                <ul>
+                    <li><strong>Right to Access:</strong> Request copies of your personal data.</li>
+                    <li><strong>Right to Rectification:</strong> Request correction of inaccurate information.</li>
+                    <li><strong>Right to Erasure:</strong> Request deletion of your personal data ("Right to be Forgotten"), subject to legal retention requirements.</li>
+                    <li><strong>Right to Restrict Processing:</strong> Request restriction on how we process your data.</li>
+                </ul>
+                <p>To exercise any of these rights, please contact our Data Protection Officer at the email provided below.</p>
+            </div>
+
+            <!-- 8. Contact -->
+            <div id="contact" class="legal-section">
+                <h2><span class="sec-num">08 //</span> Contact Authority</h2>
+                <p>For any questions regarding this privacy policy, data sovereignty requests, or partnership inquiries, please contact us directly:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:contact@boomepic.com">contact@boomepic.com</a></li>
+                    <li><strong>General Inquiries:</strong> Please visit our <a href="https://boomepic.com/contact">Contact Page</a>.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="epic-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-cta">
+                    <h3>Let's make something <br> <span>impossible.</span></h3>
+                    <a href="mailto:sponsorships@boomepic.com" class="footer-email">sponsorships@boomepic.com</a>
+                </div>
+                <div class="sys-status">
+                    <div class="status-dot"></div>
+                    <span class="status-text">Systems Operational</span>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <!-- Column 1 -->
+                <div class="link-col">
+                    <span class="link-head">Company</span>
+                    <a href="https://boomepic.com/about">About</a>
+                    <a href="https://boomepic.com/hiring">Hiring</a>
+                    <a href="https://boomepic.com/press">Press</a>
+                </div>
+                <!-- Column 2 -->
+                <div class="link-col">
+                    <span class="link-head">Offerings</span>
+                    <a href="https://boomepic.com/packages">Packages</a>
+                    <a href="https://boomepic.com/network">Network</a>
+                    <a href="https://boomepic.com/case-studies">Case Studies</a>
+                </div>
+                <!-- Column 3 -->
+                <div class="link-col">
+                    <span class="link-head">Connect</span>
+                    <a href="https://boomepic.com/contact">Contact</a>
+                </div>
+                <!-- Column 4 -->
+                <div class="link-col">
+                    <span class="link-head">Legal</span>
+                    <a href="https://boomepic.com/terms">Terms</a>
+                    <a href="https://boomepic.com/privacy-policy" style="color: #fff;">Privacy Policy</a>
+                    <div class="copyright">© 2025 BoomEpic Inc.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-brand">
+            <h1 class="epic-text">EPIC<span class="epic-dot">.</span></h1>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileOverlay');
+            overlay.classList.toggle('active');
+            
+            if(overlay.classList.contains('active')) {
+                gsap.fromTo('.mobile-nav-link', 
+                    {y: 50, opacity: 0},
+                    {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, delay: 0.2}
+                );
+            }
+        }
+
+        // ScrollSpy Logic for ToC
+        const sections = document.querySelectorAll('.legal-section');
+        const navLinks = document.querySelectorAll('.toc-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for ToC
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                gsap.to(window, {duration: 1, scrollTo: {y: targetId, offsetY: 100}, ease: "power3.out"});
+            });
+        });
+
+        // Intro Animations
+        gsap.from(".policy-header h1", {y: 50, opacity: 0, duration: 1.5, ease: "power3.out"});
+        gsap.from(".policy-container", {y: 50, opacity: 0, duration: 1, delay: 0.3, ease: "power3.out"});
+
+    </script>
+</body>
+</html>

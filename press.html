@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Press & Media // Boom Epic Dominance</title>
+    
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Official press resources for BoomEpic Media. Latest news, expert commentary topics, and media contact information.">
+    <meta name="keywords" content="BoomEpic Press, Gaming News, OSRS Economy, Creator Economy, Media Contact">
+    <meta name="author" content="BoomEpic Media">
+    <link rel="canonical" href="https://boomepic.com/press">
+
+    <!-- OPEN GRAPH / FACEBOOK -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boomepic.com/press">
+    <meta property="og:title" content="Press & Media // Boom Epic Dominance">
+    <meta property="og:description" content="Official press resources for BoomEpic Media. Latest news, expert commentary topics, and media contact information.">
+    <meta property="og:image" content="https://boomepic.com/assets/og-press.jpg">
+
+    <!-- TWITTER -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://boomepic.com/press">
+    <meta property="twitter:title" content="Press & Media // Boom Epic Dominance">
+    <meta property="twitter:description" content="Official press resources for BoomEpic Media. Latest news, expert commentary topics, and media contact information.">
+    <meta property="twitter:image" content="https://boomepic.com/assets/og-press.jpg">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Footer Font (Clash Display) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --bg-color: #050505;
+            --bg-card: #0B0B0B;
+            --text-main: #ffffff;
+            --text-muted: #A3A3A3;
+            
+            /* Accents */
+            --accent-main: #06B6D4; /* Cyan */
+            --accent-tactical: #EAB308; /* Gold */
+            --accent-direct: #10B981; /* Green */
+            
+            --border-dim: rgba(255, 255, 255, 0.08);
+            --border-light: rgba(255, 255, 255, 0.15);
+            
+            --font-head: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-tech: 'JetBrains Mono', monospace;
+            --font-footer: 'Clash Display', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- CINEMATIC NOISE --- */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNyIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjA1Ii8+PC9zdmc+');
+            z-index: 9999; pointer-events: none; opacity: 0.6;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
+
+        /* --- NAVIGATION BAR --- */
+        .top-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 80px;
+            background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(20px) saturate(150%);
+            border-bottom: 1px solid var(--border-dim);
+            z-index: 1000; display: flex; align-items: center;
+        }
+        .nav-content {
+            width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 5%;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo {
+            font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; 
+            color: #fff; text-decoration: none; letter-spacing: -0.03em; text-transform: uppercase;
+            position: relative; z-index: 1002;
+        }
+        .nav-logo span { color: var(--accent-main); }
+
+        .nav-links { display: flex; gap: 40px; align-items: center; }
+        .nav-link {
+            color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 0.9rem; font-weight: 500;
+            opacity: 0.7; transition: opacity 0.2s;
+        }
+        .nav-link:hover { opacity: 1; }
+
+        /* CONTACT BUTTON: SQUARE */
+        .nav-contact-btn {
+            padding: 10px 24px;
+            background: rgba(6, 182, 212, 0.1); 
+            border: 1px solid var(--accent-main);
+            color: var(--accent-main);
+            font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+            text-decoration: none; transition: all 0.3s;
+            border-radius: 2px;
+        }
+        .nav-contact-btn:hover { background: var(--accent-main); color: #000; box-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+
+        /* Hamburger */
+        .mobile-menu-btn {
+            display: none; width: 44px; height: 44px;
+            background: rgba(255,255,255,0.05); border: 1px solid var(--border-light);
+            border-radius: 8px; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+            cursor: pointer; position: relative; z-index: 1002;
+        }
+        .mobile-menu-btn span { width: 20px; height: 2px; background: #fff; display: block; transition: all 0.3s ease; }
+
+        .mobile-nav-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: #050505; z-index: 1001;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem;
+            transform: translateY(-100%); opacity: 0; pointer-events: none;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-nav-overlay.active { transform: translateY(0); opacity: 1; pointer-events: all; }
+        .mobile-nav-link {
+            font-family: var(--font-head); font-size: 2rem; color: #fff; 
+            text-decoration: none; font-weight: 700; text-transform: uppercase;
+            opacity: 0; transform: translateY(20px); transition: all 0.3s;
+        }
+        .mobile-nav-overlay.active .mobile-nav-link { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 900px) { 
+            .nav-links { display: none; } 
+            .mobile-menu-btn { display: flex; } 
+        }
+
+
+        /* --- HEADER --- */
+        .press-header {
+            padding: 200px 0 100px 0; text-align: left;
+            background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.05) 0%, #050505 60%);
+            position: relative; overflow: hidden; border-bottom: 1px solid var(--border-dim);
+        }
+        @media (max-width: 768px) { .press-header { padding: 140px 0 60px 0; text-align: left; } }
+
+        .label-tech {
+            font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.25em; font-weight: 700;
+            text-transform: uppercase; color: var(--text-muted); display: inline-flex; align-items: center; gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+        .label-tech::before { content:''; width:8px; height:8px; background:var(--accent-main); box-shadow: 0 0 8px var(--accent-main); border-radius: 50%; }
+        
+        .press-header h1 { 
+            font-size: clamp(3rem, 9vw, 6.5rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1; 
+            text-transform: uppercase; letter-spacing: -0.03em;
+        }
+        .press-header p { 
+            font-size: clamp(1.1rem, 3vw, 1.4rem); color: #bbb; max-width: 700px; line-height: 1.6; margin-bottom: 2rem;
+        }
+
+
+        /* --- ABOUT BLURB --- */
+        .about-blurb-section { padding: 6rem 0; background: #080808; border-bottom: 1px solid var(--border-dim); }
+        .blurb-card {
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border-dim);
+            padding: 2.5rem; border-left: 4px solid var(--accent-main);
+        }
+        .blurb-card h3 { font-size: 1.5rem; color: #fff; margin-bottom: 1rem; font-family: var(--font-head); }
+        .blurb-card p { color: #ccc; font-size: 1.05rem; line-height: 1.7; margin: 0; }
+
+
+        /* --- INTERACTIVE NEWS --- */
+        .news-section {
+            padding: 8rem 0; border-bottom: 1px solid var(--border-dim);
+        }
+        @media (max-width: 768px) { .news-section { padding: 5rem 0; } }
+
+        .news-list { display: flex; flex-direction: column; margin-top: 3rem; }
+        
+        .news-item {
+            border-top: 1px solid var(--border-dim);
+            padding: 2.5rem 0; cursor: pointer; transition: background 0.3s;
+            position: relative;
+        }
+        .news-item:last-child { border-bottom: 1px solid var(--border-dim); }
+        .news-item:hover, .news-item.active { background: rgba(255,255,255,0.02); }
+        
+        .news-header {
+            display: grid; grid-template-columns: 120px 1fr auto; gap: 2rem; align-items: center;
+        }
+        @media (max-width: 768px) { .news-header { grid-template-columns: 1fr; gap: 0.5rem; } }
+
+        .news-date { font-family: var(--font-tech); color: var(--accent-main); font-size: 0.9rem; }
+        .news-title { font-size: 1.5rem; color: #fff; font-weight: 600; font-family: var(--font-head); line-height: 1.3; transition: color 0.3s; }
+        .news-item.active .news-title { color: var(--accent-main); }
+        
+        .news-icon { 
+            color: #666; transition: transform 0.3s; 
+            @media (max-width: 768px) { display: none; } 
+        }
+        .news-item.active .news-icon { transform: rotate(90deg); color: #fff; }
+
+        .news-content {
+            max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s ease;
+            opacity: 0; padding-top: 0;
+        }
+        .news-item.active .news-content { max-height: 500px; opacity: 1; padding-top: 1.5rem; }
+        
+        .news-body { color: #aaa; font-size: 1rem; line-height: 1.7; max-width: 800px; margin-left: 152px; }
+        @media (max-width: 768px) { .news-body { margin-left: 0; } }
+
+
+        /* --- INQUIRIES & EXPECTATIONS --- */
+        .info-section { padding: 8rem 0; border-bottom: 1px solid var(--border-dim); background: #080808; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        @media (max-width: 900px) { 
+            .info-grid { grid-template-columns: 1fr; gap: 2rem; } 
+            .info-section { padding: 5rem 0; }
+        }
+
+        .info-card { background: #050505; border: 1px solid var(--border-dim); padding: 3rem; height: 100%; }
+        @media (max-width: 768px) { .info-card { padding: 2rem; } }
+
+        .info-card h3 { font-size: 1.8rem; color: #fff; margin-bottom: 2rem; font-family: var(--font-head); }
+        
+        .info-list { list-style: none; }
+        .info-item {
+            display: flex; align-items: flex-start; gap: 15px; margin-bottom: 1.5rem;
+            color: #bbb; font-size: 1rem; line-height: 1.5;
+        }
+        .info-item i { color: var(--accent-tactical); margin-top: 5px; font-size: 0.8rem; flex-shrink: 0; }
+        .info-item strong { color: #fff; font-weight: 600; margin-right: 5px; }
+
+
+        /* --- CONTACT SECTION --- */
+        .contact-split {
+            display: grid; grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--border-dim);
+        }
+        @media (max-width: 900px) { .contact-split { grid-template-columns: 1fr; } }
+
+        .contact-box {
+            padding: 8rem 5%; display: flex; flex-direction: column; justify-content: center;
+            border-right: 1px solid var(--border-dim); transition: background 0.3s;
+        }
+        @media (max-width: 768px) { .contact-box { padding: 4rem 5%; } }
+        
+        .contact-box:last-child { border-right: none; }
+        .contact-box:hover { background: rgba(255,255,255,0.02); }
+        
+        .cb-label { font-family: var(--font-tech); color: var(--text-muted); margin-bottom: 1rem; letter-spacing: 2px; }
+        .cb-title { font-size: 2.5rem; color: #fff; margin-bottom: 1.5rem; font-weight: 700; }
+        .cb-desc { font-size: 1.1rem; color: #888; margin-bottom: 2rem; max-width: 450px; line-height: 1.6; }
+        
+        .cb-link {
+            font-size: 1.5rem; color: #fff; text-decoration: none; border-bottom: 2px solid var(--border-light);
+            padding-bottom: 5px; transition: all 0.3s; display: inline-block;
+        }
+        .cb-link:hover { border-bottom-color: var(--accent-main); color: var(--accent-main); }
+
+        /* Specific styling for sponsorship box */
+        .sponsor-box { background: rgba(234, 179, 8, 0.03); }
+        .sponsor-box .cb-link:hover { border-bottom-color: var(--accent-tactical); color: var(--accent-tactical); }
+
+
+        /* --- FOOTER --- */
+        .epic-footer {
+            width: 100%; background: #050505; padding-top: 5rem; position: relative; z-index: 10;
+            font-family: var(--font-footer); border-top: 1px solid var(--border-dim); margin-top: auto;
+        }
+        .footer-inner { width: 95%; max-width: 1400px; margin: 0 auto; padding-bottom: 2rem; }
+        .footer-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 30px; }
+        .footer-cta h3 { font-family: var(--font-footer); font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1.1; font-weight: 500; margin-bottom: 1rem; text-transform: none; }
+        .footer-cta span { color: #666; }
+        .footer-email { font-size: clamp(1.2rem, 3vw, 1.8rem); text-decoration: underline; text-underline-offset: 8px; color: #fff; transition: color 0.3s; word-break: break-all; }
+        .footer-email:hover { color: #ccc; }
+        
+        .sys-status { display: inline-flex; items-center; gap: 12px; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; }
+        .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+        .status-text { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); } 70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+        
+        .footer-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.15); margin-bottom: 3rem; }
+        .footer-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 4rem; }
+        @media (max-width: 768px) { .footer-links { grid-template-columns: 1fr 1fr; } }
+        
+        .link-col { display: flex; flex-direction: column; gap: 16px; }
+        .link-head { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #666; margin-bottom: 8px; font-family: var(--font-tech); }
+        .link-col a { color: #9ca3af; text-decoration: none; transition: all 0.3s ease; position: relative; font-size: 1rem; }
+        .link-col a:hover { color: #fff; transform: translateX(5px); }
+        .link-col a::before { content: ''; position: absolute; left: -12px; top: 50%; transform: translateY(-50%) scale(0); width: 4px; height: 4px; background-color: #fff; border-radius: 50%; transition: transform 0.3s ease; }
+        .link-col a:hover::before { transform: translateY(-50%) scale(1); }
+        
+        .copyright { font-size: 0.75rem; color: #555; margin-top: auto; font-family: var(--font-tech); }
+        
+        .footer-brand { width: 100%; overflow: hidden; display: flex; justify-content: center; line-height: 0.75; padding-bottom: 0; }
+        .epic-text { font-size: 42vw; font-weight: 700; letter-spacing: -0.04em; background: linear-gradient(180deg, #ffffff 30%, #333 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none; user-select: none; margin-bottom: -5vw; }
+        .epic-dot { color: var(--accent-main); -webkit-text-fill-color: var(--accent-main); }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="top-nav">
+        <div class="nav-content">
+            <a href="https://boomepic.com" class="nav-logo">BOOM<span>EPIC</span></a>
+            
+            <!-- Desktop Links -->
+            <div class="nav-links">
+                <a href="https://boomepic.com" class="nav-link">Home</a>
+                <a href="https://boomepic.com/network" class="nav-link">Network</a>
+                <a href="https://boomepic.com/packages" class="nav-link">Packages</a>
+                <a href="https://boomepic.com/case-studies" class="nav-link">Case Studies</a>
+                <a href="https://boomepic.com/about" class="nav-link">About</a>
+                <!-- Updated Contact Button: Square -->
+                <a href="https://boomepic.com/contact" class="nav-contact-btn">Contact</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobileOverlay">
+        <a href="https://boomepic.com" class="mobile-nav-link">Home</a>
+        <a href="https://boomepic.com/network" class="mobile-nav-link">Network</a>
+        <a href="https://boomepic.com/packages" class="mobile-nav-link">Packages</a>
+        <a href="https://boomepic.com/case-studies" class="mobile-nav-link">Case Studies</a>
+        <a href="https://boomepic.com/about" class="mobile-nav-link">About</a>
+        <a href="https://boomepic.com/contact" class="btn-primary" style="margin-top: 2rem;">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <div class="press-header">
+        <div class="container">
+            <div class="label-tech">NEWSROOM</div>
+            <h1>Press & Media.</h1>
+            <p>Direct lines for journalists covering the future of creator-led media networks.</p>
+        </div>
+    </div>
+
+    <!-- ABOUT BLURB -->
+    <div class="about-blurb-section">
+        <div class="container">
+            <div class="blurb-card">
+                <h3>About BoomEpic Media</h3>
+                <p>BoomEpic Media is a next-generation creator network built on 22 years of gaming expertise. Founded by a veteran creator turned agency owner, the network bridges the gap between authentic gaming culture and Fortune 500-grade media execution. Properties include BoomEpicKill (Entertainment), Boom Epic Live (Strategy), and DropRate.gg (Direct-to-Consumer).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE NEWS -->
+    <div class="news-section">
+        <div class="container">
+            <div class="label-tech" style="color: var(--accent-main);">LATEST TRANSMISSIONS</div>
+            <h2 style="font-size: 3rem; color: #fff;">Breaking News</h2>
+            
+            <div class="news-list">
+                
+                <!-- STORY 1 -->
+                <div class="news-item" onclick="toggleNews(this)">
+                    <div class="news-header">
+                        <div class="news-date">NOV 15, 2025</div>
+                        <div class="news-title">BoomEpic Appoints 'Peejayz' as Lead Content Strategist</div>
+                        <div class="news-arrow news-icon"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-body">
+                            BoomEpic Media has officially onboarded short-form content expert Peejayz as Lead Content Strategist. With extensive experience in the Old School RuneScape (OSRS) scene and a track record working with top-tier creators like Odablock, Peejayz brings a data-driven approach to viral retention. This strategic hire underscores our commitment to dominating the algorithm through high-velocity, precision-engineered content.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STORY 2 -->
+                <div class="news-item" onclick="toggleNews(this)">
+                    <div class="news-header">
+                        <div class="news-date">NOV 01, 2025</div>
+                        <div class="news-title">Editorial Expansion: Two Senior Editors Join the Roster</div>
+                        <div class="news-arrow news-icon"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-body">
+                            To meet surging demand for high-fidelity storytelling, BoomEpic Media has expanded its post-production team with two new Senior Editors. These recruits bring specialized experience in narrative pacing and visual effects, ensuring that every piece of content meets our "Netflix-quality" standard while maintaining the authentic grit that resonates with core gamers.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STORY 3 -->
+                <div class="news-item" onclick="toggleNews(this)">
+                    <div class="news-header">
+                        <div class="news-date">OCT 20, 2025</div>
+                        <div class="news-title">Production Velocity: Boom Epic Live Scales to 12 Videos/Month</div>
+                        <div class="news-arrow news-icon"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-body">
+                            Boom Epic Live, the network's dedicated strategy hub, has successfully tripled its production output. Formerly operating on a weekly schedule, the channel now delivers 12 world-class guide videos per month. This operational scaling allows for real-time coverage of game updates, market shifts, and meta changes, cementing the channel as the definitive source for OSRS strategy.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- INFO GRID (INQUIRIES + EXPECTATIONS) -->
+    <div class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                
+                <!-- LEFT: INQUIRIES -->
+                <div class="info-card">
+                    <div class="label-tech" style="color: var(--accent-tactical);">TOPICS OF EXPERTISE</div>
+                    <h3>Media Inquiries Welcome For:</h3>
+                    <ul class="info-list">
+                        <li class="info-item"><i class="fa-solid fa-play"></i> <span>Interviews and commentary on OSRS economy, gameplay, and community trends</span></li>
+                        <li class="info-item"><i class="fa-solid fa-play"></i> <span>Insights on gaming newsletter growth and audience engagement strategies</span></li>
+                        <li class="info-item"><i class="fa-solid fa-play"></i> <span>Partnership and collaboration opportunities</span></li>
+                        <li class="info-item"><i class="fa-solid fa-play"></i> <span>Brand assets, logos, and promotional materials</span></li>
+                        <li class="info-item"><i class="fa-solid fa-play"></i> <span>Data and statistics about our audience and reach</span></li>
+                        <li class="info-item"><i class="fa-solid fa-play"></i> <span>Feature stories about content creation in the gaming space</span></li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT: EXPECTATIONS -->
+                <div class="info-card">
+                    <div class="label-tech" style="color: var(--accent-direct);">COMMUNICATION PROTOCOL</div>
+                    <h3>What To Expect:</h3>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <i class="fa-solid fa-check"></i>
+                            <span><strong>Response Time:</strong> We aim to respond to all press inquiries within 24 hours during business days.</span>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-check"></i>
+                            <span><strong>Availability:</strong> Available for interviews via email, video call, or phone.</span>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-check"></i>
+                            <span><strong>Brand Materials:</strong> Logos, media kit, and brand assets available upon request.</span>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-check"></i>
+                            <span><strong>Data Requests:</strong> Aggregate audience data and statistics available for verified media outlets.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SPLIT -->
+    <section class="contact-split">
+        <!-- Press Inquiries -->
+        <div class="contact-box">
+            <div class="cb-label">FOR JOURNALISTS</div>
+            <h3 class="cb-title">Press Inquiries</h3>
+            <p class="cb-desc">For interviews, quotes, or official statements regarding BoomEpic Media properties.</p>
+            <a href="mailto:contact@boomepic.com" class="cb-link">contact@boomepic.com</a>
+        </div>
+
+        <!-- Sponsorships -->
+        <div class="contact-box sponsor-box">
+            <div class="cb-label">FOR BRANDS</div>
+            <h3 class="cb-title">Sponsorships</h3>
+            <p class="cb-desc">Looking to activate a campaign? This channel is reserved for media buying and partnerships.</p>
+            <a href="https://boomepic.com/contact" class="cb-link">Initialize Partnership <i class="fa-solid fa-arrow-right" style="font-size: 1rem; margin-left: 5px;"></i></a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="epic-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-cta">
+                    <h3>Let's make something <br> <span>impossible.</span></h3>
+                    <a href="mailto:sponsorships@boomepic.com" class="footer-email">sponsorships@boomepic.com</a>
+                </div>
+                <div class="sys-status">
+                    <div class="status-dot"></div>
+                    <span class="status-text">Systems Operational</span>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <!-- Column 1 -->
+                <div class="link-col">
+                    <span class="link-head">Company</span>
+                    <a href="https://boomepic.com/about">About</a>
+                    <a href="https://boomepic.com/hiring">Hiring</a>
+                    <a href="https://boomepic.com/press" style="color: #fff;">Press</a>
+                </div>
+                <!-- Column 2 -->
+                <div class="link-col">
+                    <span class="link-head">Offerings</span>
+                    <a href="https://boomepic.com/packages">Packages</a>
+                    <a href="https://boomepic.com/network">Network</a>
+                    <a href="https://boomepic.com/case-studies">Case Studies</a>
+                </div>
+                <!-- Column 3 -->
+                <div class="link-col">
+                    <span class="link-head">Connect</span>
+                    <a href="https://boomepic.com/contact">Contact</a>
+                </div>
+                <!-- Column 4 -->
+                <div class="link-col">
+                    <span class="link-head">Legal</span>
+                    <a href="https://boomepic.com/terms">Terms</a>
+                    <a href="https://boomepic.com/privacy-policy">Privacy Policy</a>
+                    <div class="copyright">© 2025 BoomEpic Inc.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-brand">
+            <h1 class="epic-text">EPIC<span class="epic-dot">.</span></h1>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileOverlay');
+            overlay.classList.toggle('active');
+            
+            if(overlay.classList.contains('active')) {
+                gsap.fromTo('.mobile-nav-link', 
+                    {y: 50, opacity: 0},
+                    {y: 0, opacity: 1, stagger: 0.1, duration: 0.5, delay: 0.2}
+                );
+            }
+        }
+
+        // News Toggle
+        function toggleNews(element) {
+            // Optional: Close others
+            // document.querySelectorAll('.news-item').forEach(item => {
+            //     if(item !== element) item.classList.remove('active');
+            // });
+            element.classList.toggle('active');
+        }
+
+        // Intro Animations
+        gsap.from(".press-header h1", {y: 50, opacity: 0, duration: 1.5, ease: "power3.out"});
+        gsap.from(".press-header p", {y: 30, opacity: 0, duration: 1, delay: 0.3, ease: "power3.out"});
+
+        // Scroll Reveals
+        gsap.utils.toArray('.kit-card, .news-item').forEach(element => {
+            gsap.from(element, {
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 90%",
+                },
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+# Netlify Configuration for BoomEpic Media
+
+[build]
+  # No build command needed for static HTML
+  publish = "."
+
+# Clean URL redirects - serve HTML files without .html extension
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/case-studies"
+  to = "/case-studies.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/hiring"
+  to = "/hiring.html"
+  status = 200
+
+[[redirects]]
+  from = "/network"
+  to = "/network.html"
+  status = 200
+
+[[redirects]]
+  from = "/packages"
+  to = "/packages.html"
+  status = 200
+
+[[redirects]]
+  from = "/press"
+  to = "/press.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+# Remove trailing slashes and serve without .html
+[[redirects]]
+  from = "/about/"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/case-studies/"
+  to = "/case-studies"
+  status = 301
+
+[[redirects]]
+  from = "/contact/"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/hiring/"
+  to = "/hiring"
+  status = 301
+
+[[redirects]]
+  from = "/network/"
+  to = "/network"
+  status = 301
+
+[[redirects]]
+  from = "/packages/"
+  to = "/packages"
+  status = 301
+
+[[redirects]]
+  from = "/press/"
+  to = "/press"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy/"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/terms/"
+  to = "/terms"
+  status = 301
+
+# Redirect .html URLs to clean URLs
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/case-studies.html"
+  to = "/case-studies"
+  status = 301
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/hiring.html"
+  to = "/hiring"
+  status = 301
+
+[[redirects]]
+  from = "/network.html"
+  to = "/network"
+  status = 301
+
+[[redirects]]
+  from = "/packages.html"
+  to = "/packages"
+  status = 301
+
+[[redirects]]
+  from = "/press.html"
+  to = "/press"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
+  status = 301
+
+# Headers for better performance and SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
